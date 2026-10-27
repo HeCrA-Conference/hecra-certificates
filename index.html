@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#091f3a" />
+  <title>HeCrA 2026 | Certificate of Attendance</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <style>
+    :root{color-scheme:light;--navy:#0b2540;--gold:#b58a39;--ink:#172b42;--muted:#637287;--line:#dce4ec}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:#f1f5f8;color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+    header{background:linear-gradient(110deg,#07182d,#173c59);color:white;padding:34px 20px;text-align:center;border-bottom:5px solid var(--gold)}
+    .eyebrow{color:#e4c48a;text-transform:uppercase;letter-spacing:.19em;font-size:.74rem;font-weight:750;margin:0 0 8px}
+    h1{font-family:Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;margin:0 0 9px}
+    header p:last-child{margin:0;opacity:.83}
+    main{max-width:850px;margin:36px auto 70px;padding:0 18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(20px,4vw,36px);box-shadow:0 12px 35px #0b25400f}
+    h2{font-size:1.28rem;margin:0 0 8px}p{margin:0 0 16px}.muted{color:var(--muted);font-size:.94rem}
+    label{display:block;font-weight:700;margin:24px 0 8px}input{width:100%;font:inherit;padding:13px 15px;border:1.5px solid #b8c7d6;border-radius:8px}
+    input:focus{outline:3px solid #dce9f1;border-color:#275778}
+    button{display:flex;gap:10px;align-items:center;justify-content:center;width:100%;margin-top:14px;background:var(--navy);color:#fff;border:0;border-radius:8px;padding:14px;font-weight:700;font-size:1rem;cursor:pointer}
+    button:hover{background:#16476c}button:disabled{opacity:.6;cursor:wait}
+    #message{margin:16px 0 0;padding:12px 14px;border-radius:8px;display:none;font-size:.95rem}
+    #message.error{display:block;background:#fff1ef;border:1px solid #f0c5bf;color:#8f3025}
+    #message.success{display:block;background:#edf7f0;border:1px solid #b6d7c0;color:#1b6139}
+    .preview{display:block;width:100%;margin-top:25px;border:1px solid var(--line);box-shadow:0 4px 18px #0b25401a}
+    footer{text-align:center;color:#69798b;margin:22px 0;font-size:.8rem}
+    a{color:#205578}small{font-size:.83rem}
+  </style>
+</head>
+<body>
+<header><p class="eyebrow">Hellenic Crystallographic Association</p><h1>Certificate of Attendance</h1><p>12th International Conference of HeCrA · 23–25 October 2026 · Athens, Greece</p></header>
+<main><section class="card">
+<h2>Download your certificate</h2>
+<p class="muted">Enter your full name exactly as it appeared on your conference badge. Only names on the official check-in list are eligible.</p>
+<form id="certificate-form">
+<label for="participant-name">Full name</label>
+<input id="participant-name" type="text" placeholder="First name Last name" autocomplete="name" maxlength="120" minlength="3" required />
+<button id="generate-btn" type="submit">Verify name &amp; download PDF</button>
+</form>
+<div id="message" role="status" aria-live="polite"></div>
+<p class="muted" style="margin:22px 0 7px"><small>Your name is checked against the conference attendance list. No email address is required. Names are not saved by this webpage.</small></p>
+<img class="preview" src="certificate-preview.jpg" alt="Preview of the official HeCrA Certificate of Attendance" />
+</section><footer>© Hellenic Crystallographic Association · Conference 2026</footer></main>
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body></html>
